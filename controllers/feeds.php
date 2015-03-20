@@ -54,12 +54,6 @@ class FeedsController extends AuthenticatedController {
         }
         $myfeeds = RSSFeed::findByUser_id($GLOBALS['user']->id);
         $this->feeds = $globalfeeds + $myfeeds;
-        $plugin = PluginManager::getInstance()->getPlugin('RSSFeedsWidget');
-        if (Studip\ENV == 'development') {
-            $this->js = $plugin->getPluginURL() . '/assets/javascripts/rssfeedswidget.js';
-        } else {
-            $this->js = $plugin->getPluginURL().'/assets/javascripts/rssfeedswidget.min.js';
-        }
     }
 
     public function save_subscriptions_action() {
@@ -100,12 +94,6 @@ class FeedsController extends AuthenticatedController {
             $this->set_layout(null);
         } else {
             $this->set_layout($GLOBALS['template_factory']->open('layouts/base'));
-        }
-        $plugin = PluginManager::getInstance()->getPlugin('RSSFeedsWidget');
-        if (Studip\ENV == 'development') {
-            $this->js = $plugin->getPluginURL() . '/assets/javascripts/rssfeedswidget.js';
-        } else {
-            $this->js = $plugin->getPluginURL().'/assets/javascripts/rssfeedswidget.min.js';
         }
         $this->max_items = Config::get()->RSSFEEDSWIDGET_MAX_FEED_ITEMS;
         $this->feeds = RSSFeed::findByUser_id('studip');

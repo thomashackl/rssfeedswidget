@@ -23,20 +23,13 @@ STUDIP.RSSFeedsWidget = {
         $('table#myfeeds tr.feed').parent().append(newline);
         $('#add-feed').remove();
         return false;
+    },
+
+    askDelete: function(id) {
+        if (confirm($('#delete-'+id).data('confirm'))) {
+            return true;
+        }
+        return false;
     }
 
 }
-
-jQuery(function() {
-    $('#add-feed').click(function() {
-        return STUDIP.RSSFeedsWidget.addFeed();
-    });
-    $('.delete-feed').each(function (index) {
-        $(this).click(function() {
-            if (confirm($(this).data('confirm'))) {
-                return true;
-            }
-            return false;
-        });
-    });
-});

@@ -43,6 +43,12 @@ class RSSFeedsWidget extends StudIPPlugin implements PortalPlugin {
                     'title' => dgettext('rssfeedswidget', 'Globale Einstellungen')));
                 $template->icons = array($subscriptions, $settings);
             }
+            if (Studip\ENV == 'development') {
+                $js = $this->getPluginURL() . '/assets/javascripts/rssfeedswidget.js';
+            } else {
+                $js = $this->getPluginURL().'/assets/javascripts/rssfeedswidget.min.js';
+            }
+            PageLayout::addScript($js);
 
             return $template;
         }
