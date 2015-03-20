@@ -1,0 +1,6 @@
+pluginclassname=RSSFeedsWidget
+pluginname=RSSFeedsWidget
+origin=intelec
+version=1.0
+studipMinVersion=3.1
+description=Dieses Widget zeigt abonnierte RSS-Feeds.
