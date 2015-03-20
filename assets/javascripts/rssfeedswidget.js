@@ -20,7 +20,7 @@ STUDIP.RSSFeedsWidget = {
                     attr('checked', true).
                     attr('name', 'feeds[_new][visible]'))).
             append($('<td>'));
-        $('table#myfeeds tr.feed').parent().append(newline);
+        $('table#myfeeds tbody').append(newline);
         $('#add-feed').remove();
         return false;
     },
