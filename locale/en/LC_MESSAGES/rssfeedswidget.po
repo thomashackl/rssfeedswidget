@@ -1,0 +1,84 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-20 12:06+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: RSSFeedsWidget.class.php:22
+msgid "News von anderen Webseiten"
+msgstr ""
+
+#: RSSFeedsWidget.class.php:38
+msgid "Meine Streams"
+msgstr ""
+
+#: RSSFeedsWidget.class.php:43
+msgid "Globale Einstellungen"
+msgstr ""
+
+#: views/feeds/index.php:27
+msgid ""
+"Keine RSS-Feeds vorhanden. Um Feeds hinzuzufügen, klicken Sie rechts auf das "
+"RSS-Symbol."
+msgstr ""
+
+#: views/feeds/settings.php:4
+msgid "Wie viele Einträge sollen pro Feed angezeigt werden?"
+msgstr ""
+
+#: views/feeds/settings.php:9
+msgid "Globale RSS-Feeds"
+msgstr ""
+
+#: views/feeds/settings.php:11
+msgid "Globalen RSS-Feed hinzufügen"
+msgstr ""
+
+#: views/feeds/settings.php:17 views/feeds/subscriptions.php:13
+msgid "Name"
+msgstr ""
+
+#: views/feeds/settings.php:18 views/feeds/subscriptions.php:14
+msgid "URL"
+msgstr ""
+
+#: views/feeds/settings.php:19 views/feeds/subscriptions.php:15
+msgid "Sichtbar?"
+msgstr ""
+
+#: views/feeds/settings.php:38 views/feeds/subscriptions.php:43
+msgid "Wollen Sie diesen Feed wirklich löschen?"
+msgstr ""
+
+#: views/feeds/settings.php:38 views/feeds/subscriptions.php:43
+msgid "Globalen RSS-Feed löschen"
+msgstr ""
+
+#: views/feeds/settings.php:47 views/feeds/subscriptions.php:53
+msgid "Speichern"
+msgstr ""
+
+#: views/feeds/settings.php:48 views/feeds/subscriptions.php:54
+msgid "Abbrechen"
+msgstr ""
+
+#: views/feeds/subscriptions.php:5
+msgid "Meine RSS-Feeds"
+msgstr ""
+
+#: views/feeds/subscriptions.php:7
+msgid "RSS-Feed hinzufügen"
+msgstr ""
