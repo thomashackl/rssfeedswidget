@@ -45,10 +45,13 @@ class RSSFeedsWidget extends StudIPPlugin implements PortalPlugin {
             }
             if (Studip\ENV == 'development') {
                 $js = $this->getPluginURL() . '/assets/javascripts/rssfeedswidget.js';
+                $css = $this->getPluginURL() . '/assets/stylesheets/rssfeedswidget.css';
             } else {
                 $js = $this->getPluginURL().'/assets/javascripts/rssfeedswidget.min.js';
+                $css = $this->getPluginURL() . '/assets/stylesheets/rssfeedswidget.min.css';
             }
             PageLayout::addScript($js);
+            PageLayout::addStylesheet($css);
 
             return $template;
         }

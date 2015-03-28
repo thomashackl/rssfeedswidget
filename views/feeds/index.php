@@ -20,6 +20,10 @@
         <section id="rssitem_<?= $i ?>">
             <?= studip_utf8decode($items[$i]->get_content()) ?>
         </section>
+        <footer>
+            <a href="<?= $items[$i]->get_link() ?>" target="_blank" title="<?= dgettext('rssfeedswidget', 'Zur Originalmeldung') ?>">
+                <?= dgettext('rssfeedswidget', 'Zur Originalmeldung') ?></a>
+        </footer>
     </article>
         <?php } ?>
     <?php } else { ?>
