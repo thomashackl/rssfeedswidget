@@ -28,7 +28,7 @@
                     <input type="text" size="30" maxlength="255" name="feeds[<?= $f->id ?>][name]" value="<?= htmlReady($f->name) ?>"/>
                 </td>
                 <td>
-                    <input type="text" size="50" maxlength="1024" name="feeds[<?= $f->id ?>][url]" value="<?= htmlReady($f->url) ?>"<?= ($f->user_id == 'studip') ? ' readonly' : '' ?>/>
+                    <input type="text" size="50" maxlength="1024" name="feeds[<?= $f->id ?>][url]" value="<?= htmlReady($f->url) ?>"/>
                 </td>
                 <td>
                     <input type="checkbox" name="feeds[<?= $f->id ?>][visible]"<?= $f->hidden ? '' : ' checked' ?>/>
