@@ -53,7 +53,8 @@ class FeedsController extends AuthenticatedController {
             $g->hidden = $this->get_global_feed_visibility($g);
         }
         $myfeeds = RSSFeed::findByUser_id($GLOBALS['user']->id);
-        $this->feeds = $globalfeeds + $myfeeds;
+        $this->feeds = array_merge($globalfeeds, $myfeeds);
+        usort($this->feeds, function($a, $b) { return strnatcasecmp($a->name, $b->name); });
     }
 
     public function save_subscriptions_action() {
@@ -97,6 +98,7 @@ class FeedsController extends AuthenticatedController {
         }
         $this->max_items = Config::get()->RSSFEEDSWIDGET_MAX_FEED_ITEMS;
         $this->feeds = RSSFeed::findByUser_id('studip');
+        usort($this->feeds, function($a, $b) { return strnatcasecmp($a->name, $b->name); });
     }
 
     public function save_settings_action() {
