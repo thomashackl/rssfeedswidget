@@ -139,7 +139,7 @@ class FeedsController extends AuthenticatedController {
         $urls = array_map(function($f) {
             return $f->url;
         }, $feeds);
-        $max_items_per_feed = Config::get()->RSSFEEDSWIDGET_MAX_ITEMS ?: 5;
+        $max_items_per_feed = Config::get()->RSSFEEDSWIDGET_MAX_FEED_ITEMS ?: 5;
         // Merge all feed items.
         foreach ($feeds as $feed) {
             $sp = new SimplePie();
