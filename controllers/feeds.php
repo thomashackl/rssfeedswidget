@@ -124,9 +124,7 @@ class FeedsController extends AuthenticatedController {
 
     public function delete_action($feed_id) {
         $feed = RSSFeed::find($feed_id);
-        if ($feed->user_id == 'studip' && !$GLOBALS['perm']->have_perm('root')) {
-            continue;
-        } else {
+        if ($feed->user_id != 'studip' || $GLOBALS['perm']->have_perm('root')) {
             $feed->delete();
         }
         $this->redirect(URLHelper::getLink('dispatch.php/start'));
