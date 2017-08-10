@@ -9,7 +9,7 @@ class Initialize extends DBMigration {
                 'type' => 'integer',
                 'range' => 'global',
                 'section' => 'rssfeedswidget',
-                'description' => 'Legt fest, wie viele Newseintr‰ge maximal pro RSS-Feed angezeigt werden.'
+                'description' => 'Legt fest, wie viele Newseintr√§ge maximal pro RSS-Feed angezeigt werden.'
             ));
         } catch (InvalidArgumentException $e) {}
     }

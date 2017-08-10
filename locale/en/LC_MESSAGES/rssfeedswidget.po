@@ -3,84 +3,86 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-20 12:06+0100\n"
-"PO-Revision-Date: 2015-03-20 12:10+0200\n"
-"Last-Translator: Thomas <Thomas.Hackl@uni-passau.de>\n"
-"Language-Team: English "
-"<http://example.com/weblate/projects/studip/rssfeedswidget/en/>\n"
-"Language: en\n"
+"POT-Creation-Date: 2017-08-10 15:37+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.2\n"
 
 #: RSSFeedsWidget.class.php:22
 msgid "News von anderen Webseiten"
-msgstr "News from external web sites"
+msgstr "News from other websites"
 
 #: RSSFeedsWidget.class.php:38
 msgid "Meine Streams"
-msgstr "My feeds"
+msgstr "My streams"
 
 #: RSSFeedsWidget.class.php:43
 msgid "Globale Einstellungen"
 msgstr "Global settings"
 
-#: views/feeds/index.php:27
+#: views/feeds/index.php:24 views/feeds/index.php:25
+msgid "Zur Originalmeldung"
+msgstr "To original post"
+
+#: views/feeds/index.php:31
 msgid ""
-"Keine RSS-Feeds vorhanden. Um Feeds hinzuzufügen, klicken Sie rechts auf das "
+"Keine RSS-Feeds vorhanden. Um Feeds hinzuzufÃ¼gen, klicken Sie rechts auf das "
 "RSS-Symbol."
-msgstr "No RSS feeds found. Click the RSS symbol on the right to add some."
+msgstr "No RSS feeds found. Click the RSS symbol on the right to add feeds."
 
-#: views/feeds/settings.php:4
-msgid "Wie viele Einträge sollen pro Feed angezeigt werden?"
-msgstr "How many items to show per feed?"
+#: views/feeds/settings.php:3
+msgid "Wie viele EintrÃ¤ge sollen pro Feed angezeigt werden?"
+msgstr "How many entries per feed shall be shown?"
 
-#: views/feeds/settings.php:9
+#: views/feeds/settings.php:8
 msgid "Globale RSS-Feeds"
 msgstr "Global RSS feeds"
 
-#: views/feeds/settings.php:11
-msgid "Globalen RSS-Feed hinzufügen"
+#: views/feeds/settings.php:10
+msgid "Globalen RSS-Feed hinzufÃ¼gen"
 msgstr "Add global RSS feed"
 
-#: views/feeds/settings.php:17 views/feeds/subscriptions.php:13
+#: views/feeds/settings.php:16 views/feeds/subscriptions.php:12
 msgid "Name"
 msgstr "Name"
 
-#: views/feeds/settings.php:18 views/feeds/subscriptions.php:14
+#: views/feeds/settings.php:17 views/feeds/subscriptions.php:13
 msgid "URL"
 msgstr "URL"
 
-#: views/feeds/settings.php:19 views/feeds/subscriptions.php:15
+#: views/feeds/settings.php:18 views/feeds/subscriptions.php:14
 msgid "Sichtbar?"
 msgstr "Visible?"
 
-#: views/feeds/settings.php:38 views/feeds/subscriptions.php:43
-msgid "Wollen Sie diesen Feed wirklich löschen?"
-msgstr "Do you really want to delete this feed?"
+#: views/feeds/settings.php:37 views/feeds/subscriptions.php:42
+msgid "Wollen Sie diesen Feed wirklich lÃ¶schen?"
+msgstr "Du you really want to delete this feed?"
 
-#: views/feeds/settings.php:38 views/feeds/subscriptions.php:43
-msgid "Globalen RSS-Feed löschen"
+#: views/feeds/settings.php:37 views/feeds/subscriptions.php:42
+msgid "Globalen RSS-Feed lÃ¶schen"
 msgstr "Delete global RSS feed"
 
-#: views/feeds/settings.php:47 views/feeds/subscriptions.php:53
+#: views/feeds/settings.php:46 views/feeds/subscriptions.php:52
 msgid "Speichern"
 msgstr "Save"
 
-#: views/feeds/settings.php:48 views/feeds/subscriptions.php:54
+#: views/feeds/settings.php:47 views/feeds/subscriptions.php:53
 msgid "Abbrechen"
 msgstr "Cancel"
 
-#: views/feeds/subscriptions.php:5
+#: views/feeds/subscriptions.php:4
 msgid "Meine RSS-Feeds"
 msgstr "My RSS feeds"
 
-#: views/feeds/subscriptions.php:7
-msgid "RSS-Feed hinzufügen"
+#: views/feeds/subscriptions.php:6
+msgid "RSS-Feed hinzufÃ¼gen"
 msgstr "Add RSS feed"

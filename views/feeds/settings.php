@@ -1,14 +1,14 @@
 <form class="studip_form" action="<?= PluginEngine::getURL('RSSFeedsWidget/feeds/save_settings') ?>" method="post">
     <label class="caption">
-        <?= dgettext('rssfeedswidget', 'Wie viele Einträge sollen pro Feed angezeigt werden?') ?>
+        <?= dgettext('rssfeedswidget', 'Wie viele EintrÃ¤ge sollen pro Feed angezeigt werden?') ?>
         <input type="number" name="max_items" value="<?= $max_items ?>"/>
     </label>
     <table class="default" id="myfeeds">
         <caption>
             <?= dgettext('rssfeedswidget', 'Globale RSS-Feeds') ?>
             <span class="actions">
-                <a href="" onclick="return STUDIP.RSSFeedsWidget.addFeed()" id="add-feed" title="<?= dgettext('rssfeedswidget', 'Globalen RSS-Feed hinzufügen') ?>">
-                    <?= Assets::img('icons/16/blue/add.png') ?></a>
+                <a href="" onclick="return STUDIP.RSSFeedsWidget.addFeed()" id="add-feed" title="<?= dgettext('rssfeedswidget', 'Globalen RSS-Feed hinzufÃ¼gen') ?>">
+                    <?= Icon::create('add', 'clickable') ?></a>
             </span>
         </caption>
         <thead>
@@ -34,8 +34,8 @@
                     <input type="checkbox" name="feeds[<?= $f->id ?>][visible]"<?= $f->hidden ? '' : ' checked' ?>/>
                 </td>
                 <td>
-                    <a href="<?= PluginEngine::getURL('RSSFeedsWidget/feeds/delete/'.$f->id) ?>" id="delete-<?= $f->id ?>" class="delete-feed" onclick="return STUDIP.RSSFeedsWidget.askDelete('<?= $f->id ?>')" data-confirm="<?= dgettext('rssfeedswidget', 'Wollen Sie diesen Feed wirklich löschen?') ?>" title="<?= dgettext('rssfeedswidget', 'Globalen RSS-Feed löschen') ?>">
-                        <?= Assets::img('icons/16/blue/trash.png') ?></a>
+                    <a href="<?= PluginEngine::getURL('RSSFeedsWidget/feeds/delete/'.$f->id) ?>" id="delete-<?= $f->id ?>" class="delete-feed" onclick="return STUDIP.RSSFeedsWidget.askDelete('<?= $f->id ?>')" data-confirm="<?= dgettext('rssfeedswidget', 'Wollen Sie diesen Feed wirklich lÃ¶schen?') ?>" title="<?= dgettext('rssfeedswidget', 'Globalen RSS-Feed lÃ¶schen') ?>">
+                        <?=Icon::create('trash', 'clickable') ?></a>
                 </td>
             </tr>
         <?php } ?>

@@ -3,8 +3,8 @@
         <caption>
             <?= dgettext('rssfeedswidget', 'Meine RSS-Feeds') ?>
             <span class="actions">
-                <a href="" id="add-feed" onclick="return STUDIP.RSSFeedsWidget.addFeed()" title="<?= dgettext('rssfeedswidget', 'RSS-Feed hinzufügen') ?>">
-                    <?= Assets::img('icons/16/blue/add.png') ?></a>
+                <a href="" id="add-feed" onclick="return STUDIP.RSSFeedsWidget.addFeed()" title="<?= dgettext('rssfeedswidget', 'RSS-Feed hinzufÃ¼gen') ?>">
+                    <?= Icon::create('add', 'clickable') ?></a>
             </span>
         </caption>
         <thead>
@@ -39,8 +39,8 @@
                 </td>
                 <td>
                     <?php if ($f->user_id != 'studip') { ?>
-                    <a href="<?= PluginEngine::getURL('RSSFeedsWidget/feeds/delete/'.$f->id) ?>" id="delete-<?= $f->id ?>" class="delete-feed" onclick="return STUDIP.RSSFeedsWidget.askDelete('<?= $f->id ?>')" data-confirm="<?= dgettext('rssfeedswidget', 'Wollen Sie diesen Feed wirklich löschen?') ?>" title="<?= dgettext('rssfeedswidget', 'Globalen RSS-Feed löschen') ?>">
-                        <?= Assets::img('icons/16/blue/trash.png') ?></a>
+                    <a href="<?= PluginEngine::getURL('RSSFeedsWidget/feeds/delete/'.$f->id) ?>" id="delete-<?= $f->id ?>" class="delete-feed" onclick="return STUDIP.RSSFeedsWidget.askDelete('<?= $f->id ?>')" data-confirm="<?= dgettext('rssfeedswidget', 'Wollen Sie diesen Feed wirklich lÃ¶schen?') ?>" title="<?= dgettext('rssfeedswidget', 'Globalen RSS-Feed lÃ¶schen') ?>">
+                        <?= Icon::create('trash', 'clickable') ?></a>
                     <?php } ?>
                 </td>
             </tr>
