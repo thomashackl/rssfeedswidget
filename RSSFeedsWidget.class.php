@@ -12,6 +12,9 @@
  * @category    Stud.IP
  */
 
+require_once(__DIR__ . '/controllers/feeds.php');
+require_once(__DIR__ . '/models/RSSFeed.php');
+
 class RSSFeedsWidget extends StudIPPlugin implements PortalPlugin {
 
     public function __construct()
@@ -25,8 +28,6 @@ class RSSFeedsWidget extends StudIPPlugin implements PortalPlugin {
 
     function getPortalTemplate() {
         if ($GLOBALS['user']->id != 'nobody') {
-            require_once(__DIR__ . '/controllers/feeds.php');
-            require_once(__DIR__ . '/models/RSSFeed.php');
             $trails_root = $this->getPluginPath();
             $dispatcher = new Trails_Dispatcher($this->getPluginPath(), "plugins.php", 'index');
             $controller = new FeedsController($dispatcher);
