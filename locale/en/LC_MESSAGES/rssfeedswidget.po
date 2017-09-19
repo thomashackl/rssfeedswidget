@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-10 15:37+0200\n"
+"POT-Creation-Date: 2017-09-19 16:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: RSSFeedsWidget.class.php:22
+#: RSSFeedsWidget.class.php:26
 msgid "News von anderen Webseiten"
 msgstr "News from other websites"
 
-#: RSSFeedsWidget.class.php:38
+#: RSSFeedsWidget.class.php:42
 msgid "Meine Streams"
 msgstr "My streams"
 
-#: RSSFeedsWidget.class.php:43
+#: RSSFeedsWidget.class.php:47
 msgid "Globale Einstellungen"
 msgstr "Global settings"
 
