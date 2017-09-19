@@ -12,11 +12,12 @@
  * @category    Stud.IP
  */
 
-require_once('bootstrap.php');
-require_once('controllers/feeds.php');
-require_once('models/RSSFeed.php');
-
 class RSSFeedsWidget extends StudIPPlugin implements PortalPlugin {
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
     public function getPluginName() {
         return dgettext('rssfeedswidget', 'News von anderen Webseiten');
@@ -24,6 +25,8 @@ class RSSFeedsWidget extends StudIPPlugin implements PortalPlugin {
 
     function getPortalTemplate() {
         if ($GLOBALS['user']->id != 'nobody') {
+            require_once(__DIR__ . '/controllers/feeds.php');
+            require_once(__DIR__ . '/models/RSSFeed.php');
             $trails_root = $this->getPluginPath();
             $dispatcher = new Trails_Dispatcher($this->getPluginPath(), "plugins.php", 'index');
             $controller = new FeedsController($dispatcher);
@@ -34,12 +37,12 @@ class RSSFeedsWidget extends StudIPPlugin implements PortalPlugin {
             $template->content = $response->body;
 
             $subscriptions = new Navigation('', PluginEngine::getURL('rssfeedswidget/feeds/subscriptions'));
-            $subscriptions->setImage('icons/16/blue/rss.png', array('data-dialog' => 'size=auto',
+            $subscriptions->setImage(Icon::create('rss', 'clickable'), array('data-dialog' => 'size=auto',
                 'title' => dgettext('rssfeedswidget', 'Meine Streams')));
             $template->icons = array($subscriptions);
             if ($GLOBALS['perm']->have_perm('root')) {
                 $settings = new Navigation('', PluginEngine::getURL('rssfeedswidget/feeds/settings'));
-                $settings->setImage('icons/16/blue/admin.png', array('data-dialog' => 'size=auto',
+                $settings->setImage(Icon::create('admin', 'clickable'), array('data-dialog' => 'size=auto',
                     'title' => dgettext('rssfeedswidget', 'Globale Einstellungen')));
                 $template->icons = array($subscriptions, $settings);
             }
