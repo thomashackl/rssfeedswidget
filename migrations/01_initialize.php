@@ -1,6 +1,6 @@
 <?php
 
-class Initialize extends DBMigration {
+class Initialize extends Migration {
 
     public function up() {
         try {

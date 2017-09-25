@@ -1,6 +1,6 @@
 <?php
 
-class DatabaseTable extends DBMigration {
+class DatabaseTable extends Migration {
 
     public function up() {
         DBManager::get()->exec("CREATE TABLE IF NOT EXISTS `rss_feeds` (
