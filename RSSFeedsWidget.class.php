@@ -38,14 +38,14 @@ class RSSFeedsWidget extends StudIPPlugin implements PortalPlugin {
             $template->content = $response->body;
 
             $subscriptions = new Navigation('', PluginEngine::getURL('rssfeedswidget/feeds/subscriptions'));
-            $subscriptions->setImage(Icon::create('rss', 'clickable'), array('data-dialog' => 'size=auto',
-                'title' => dgettext('rssfeedswidget', 'Meine Streams')));
-            $template->icons = array($subscriptions);
+            $subscriptions->setImage(Icon::create('rss', 'clickable'), ['data-dialog' => 'size=auto',
+                'title' => dgettext('rssfeedswidget', 'Meine Streams')]);
+            $template->icons = [$subscriptions];
             if ($GLOBALS['perm']->have_perm('root')) {
                 $settings = new Navigation('', PluginEngine::getURL('rssfeedswidget/feeds/settings'));
-                $settings->setImage(Icon::create('admin', 'clickable'), array('data-dialog' => 'size=auto',
-                    'title' => dgettext('rssfeedswidget', 'Globale Einstellungen')));
-                $template->icons = array($subscriptions, $settings);
+                $settings->setImage(Icon::create('admin', 'clickable'), ['data-dialog' => 'size=auto',
+                    'title' => dgettext('rssfeedswidget', 'Globale Einstellungen')]);
+                $template->icons = [$subscriptions, $settings];
             }
             if (Studip\ENV == 'development') {
                 $js = $this->getPluginURL() . '/assets/javascripts/rssfeedswidget.js';

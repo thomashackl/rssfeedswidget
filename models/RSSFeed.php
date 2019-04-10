@@ -16,13 +16,13 @@
  */
 class RSSFeed extends SimpleORMap {
 
-    public static function configure($config=array()) {
+    public static function configure($config=[]) {
         $config['db_table'] = 'rss_feeds';
-        $config['belongs_to']['user'] = array(
+        $config['belongs_to']['user'] = [
             'class_name' => 'User',
             'foreign_key' => 'user_id',
             'assoc_foreign_key' => 'user_id'
-        );
+        ];
         parent::configure($config);
     }
 

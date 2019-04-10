@@ -63,7 +63,7 @@ class FeedsController extends AuthenticatedController {
         if ($config) {
             $config = unserialize($config);
         } else {
-            $config = array();
+            $config = [];
         }
         foreach (Request::getArray('feeds') as $feed) {
             if ($feed['user_id'] == 'studip') {
@@ -132,7 +132,7 @@ class FeedsController extends AuthenticatedController {
 
     private function get_feed_items($feeds) {
         require_once(__DIR__.'/../vendor/simplepie/autoloader.php');
-        $items = array();
+        $items = [];
         // Get all feed urls.
         $urls = array_map(function($f) {
             return $f->url;

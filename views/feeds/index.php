@@ -7,7 +7,7 @@
     <article class="rssitem_<?= $i ?>">
         <header>
             <h1>
-                <a href="<?= ContentBoxHelper::href('rssitem_'.$i, array('contentbox_type' => 'news')) ?>">
+                <a href="<?= ContentBoxHelper::href('rssitem_'.$i, ['contentbox_type' => 'news']) ?>">
                     <?= $items[$i]->get_title() ?>
                 </a>
             </h1>

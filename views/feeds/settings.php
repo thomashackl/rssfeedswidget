@@ -43,7 +43,7 @@
     </table>
     <?= CSRFProtection::tokenTag() ?>
     <div class="submit_wrapper" data-dialog-buttons>
-        <?= Studip\Button::createAccept(dgettext('rssfeedswidget', 'Speichern'), 'submit', array('data-dialog-button' => '')) ?>
-        <?= Studip\LinkButton::createCancel(dgettext('rssfeedswidget', 'Abbrechen'), URLHelper::getLink('dispatch.php/start'), array('data-dialog-button' => '', 'data-dialog' => 'close')) ?>
+        <?= Studip\Button::createAccept(dgettext('rssfeedswidget', 'Speichern'), 'submit', ['data-dialog-button' => '']) ?>
+        <?= Studip\LinkButton::createCancel(dgettext('rssfeedswidget', 'Abbrechen'), URLHelper::getLink('dispatch.php/start'), ['data-dialog-button' => '', 'data-dialog' => 'close']) ?>
     </div>
 </form>
