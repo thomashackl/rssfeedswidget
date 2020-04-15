@@ -142,7 +142,7 @@ class FeedsController extends AuthenticatedController {
         foreach ($feeds as $feed) {
             $sp = new SimplePie();
             // Enable caching in default location.
-            $sp->set_cache_location($GLOBALS['CACHING_FILECACHE_PATH']);
+            $sp->set_cache_location($GLOBALS['TMP_PATH']);
             $sp->set_feed_url($feed->url);
             $sp->init();
             foreach ($sp->get_items(0, $max_items_per_feed) as $item) {
